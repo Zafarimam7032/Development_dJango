@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>dynamic page</h1>
+      <form action="" method="get">
+        <input type="radio" name="data" value="add" /> Add
+        <input type="radio" name="data" value="remove" /> Remove
+        <button type="submit">start Operation</button>
+      </form>
+
+      {% if value == 'add' %}
+      <form action="" method="get">
+        <input type="text" name="userName" id="" />
+        <button type="submit">Add Program</button>
+      </form>
+      {% endif %} {% if value == 'remove' %}
+      <form action="" method="get">
+        <input type="text" name="removeData" id="" />
+        <button type="submit">Remove Program</button>
+      </form>
+      {% endif %}
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aut ab
+        quis ratione quisquam tenetur adipisci est reprehenderit autem repellat.
+        Similique et adipisci dolore reprehenderit, hic error aut illum neque
+        nulla delectus, facilis nostrum voluptatum. Aut commodi nemo culpa
+        expedita possimus velit sit blanditiis provident labore! Officiis, vitae
+        porro molestias mollitia vero aliquid. Quidem labore voluptatum possimus
+        distinctio! Veniam, laborum.
+      </p>
+      <h2>{{name}}</h2>
+      <h2>{{address}}</h2>
+      <ol>
+        {% for program in listOfprogramming %}
+        <li>{{program}}</li>
+        {% endfor %}
+      </ol>
+    </center>
+  </body>
+</html>
